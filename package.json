@@ -1,0 +1,90 @@
+{
+  "name": "@zaduma/astro-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "vercel:dev": "vercel dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "serve": "astro preview",
+    "astro": "astro",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src",
+    "ci": "pnpm lint && prettier --check src",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.0",
+    "@astrojs/mdx": "^6.0.3",
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/solid-js": "^7.0.1",
+    "@fontsource-variable/brygada-1918": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@mdx-js/mdx": "3.1.1",
+    "@shikijs/twoslash": "^4.3.0",
+    "@tailwindcss/postcss": "4.3.1",
+    "@types/react": "^19.2.17",
+    "@types/unist": "^3.0.3",
+    "@vercel/og": "^0.11.1",
+    "astro": "^6.4.6",
+    "estree-util-value-to-estree": "^3.5.0",
+    "gray-matter": "4.0.3",
+    "plaiceholder": "^3.0.0",
+    "postcss": "8.5.10",
+    "reading-time": "^1.5.0",
+    "remark-supersub": "^1.0.0",
+    "sharp": "0.35.3",
+    "shiki": "^4.3.0",
+    "solid-js": "^1.9.13",
+    "tailwindcss": "^4.3.1",
+    "twoslash": "^0.3.8",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
+    "vercel": "^58.4.0",
+    "yargs-parser": "^22.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "@hasparus/eslint-config": "3.0.0",
+    "@playwright/test": "1.62.0",
+    "@types/hast": "3.0.4",
+    "@types/node": "^26.1.0",
+    "cssnano": "^7.1.5",
+    "eslint": "^10.8.0",
+    "eslint-plugin-check-file": "3.3.1",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "tsx": "^4.23.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.2"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.62.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core",
+        "rollup"
+      ]
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "core-js-pure",
+      "puppeteer",
+      "sharp"
+    ],
+    "patchedDependencies": {
+      "prettier-plugin-astro@0.14.0": "patches/prettier-plugin-astro@0.14.0.patch"
+    }
+  }
+}
